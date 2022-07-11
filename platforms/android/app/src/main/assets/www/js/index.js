@@ -130,9 +130,9 @@ var app = {
 
     CleverTap.onUserLogin({
       Name: "Karthik Iyer",
-      Identity: "kk1611",
-      Phone: +913333333333,
-      Email: "kk@gmail.com",
+      Identity: "kkcord",
+      Phone: 3333333333,
+      Email: "karthikcordova@test.com",
       Gender: "M",
       "MSG-push": true,
       DOB: "22-04-1994",

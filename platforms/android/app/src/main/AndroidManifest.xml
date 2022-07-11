@@ -9,34 +9,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService">
+<!--        <service android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <service android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTNotificationIntentService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.clevertap.PUSH_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <service android:name="com.clevertap.android.sdk.FcmTokenListenerService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <service
+            android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTNotificationIntentService">
-            <intent-filter>
-                <action android:name="com.clevertap.PUSH_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name="com.clevertap.android.sdk.FcmTokenListenerService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="65R-654-5Z6Z" />
-        <meta-data android:name="CLEVERTAP_TOKEN" android:value="456-256" />
+        <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="TEST-W8W-6WR-846Z" />
+        <meta-data android:name="CLEVERTAP_TOKEN" android:value="TEST-206-0b0" />
         <meta-data android:name="CLEVERTAP_REGION" android:value=" " />
-        <meta-data android:name="FCM_SENDER_ID" android:value="487275975172" />
-        <meta-data
-            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
-            android:value="1"/>
-        <receiver android:exported="true" android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-        <receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" />
+<!--        <meta-data android:name="FCM_SENDER_ID" android:value="487275975172" />-->
+<!--        <meta-data-->
+<!--            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"-->
+<!--            android:value="1"/>-->
+<!--        <receiver android:exported="true" android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.android.vending.INSTALL_REFERRER" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" />-->
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
